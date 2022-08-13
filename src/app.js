@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Navigation} from "./components/molecules/navigation/navigation";
+import {Header} from "./components/organisms/header/header";
 import {
     BrowserRouter,
     Routes,
@@ -8,10 +8,11 @@ import {
 } from "react-router-dom";
 import './assets/index.css';
 import {Home} from "./components/pages/home/home";
-import {Footer} from "./components/molecules/footer/footer";
+import {Footer} from "./components/atoms/footer/footer";
 import styled from "styled-components";
 import {Contact} from "./components/pages/contact/contact";
 import {createRoot} from 'react-dom/client';
+import {NotFound} from "./components/pages/notFound/notFound";
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -22,11 +23,12 @@ const Main = styled.main`
 
 root.render(
     <BrowserRouter>
-        <Navigation/>
+        <Header/>
         <Main>
             <Routes>
                 <Route index element={<Home/>}/>
                 <Route path='/contact' element={<Contact />} />
+                <Route path='*' element={<NotFound />} />
             </Routes>
         </Main>
         <Footer/>

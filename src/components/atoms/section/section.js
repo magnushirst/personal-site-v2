@@ -5,13 +5,17 @@ import PropTypes from "prop-types";
 const StyledSection = styled.section`
   line-height: 1rem;
   padding: 2rem 2rem;
-  max-width: 80vw;
-  width: 70%;
+  max-width: 60em;
+  width: 90vw;
   color: #333;
   text-align: ${props => props.align};
   background: white;
   margin: 2em auto 0;
-  box-shadow: 1px 1px 8px 2px black;
+  box-shadow: -5px 5px 5px -4px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 export const Section = ({ align, ...props }) => {

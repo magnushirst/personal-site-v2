@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-
+import React, {useEffect, useRef, useState} from 'react';
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { NestedNavigation } from "./nestedNavigation";
+import {NestedNavigation} from "../../molecules/nestedNavigation/nestedNavigation";
 import {DecoratedNavLink} from "../../atoms/decoratedNavLink/decoratedNavLink";
+import OutsideClick from "../../../hooks/outsideClick/outsideClick";
 
 const HeaderWrapper = styled.div`
   padding: 0 2em 0 2em;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  background-color: white;
-  color: rgb(81, 138, 176);
+  background-color: #2A3D45;
+  color: #DDC9B4;
 `
 const SiteTitle = styled.h1`
   padding: 1em 0;
   font-weight: 900;
   font-size: 1.4rem;
   display: inline-block;
+  f
   vertical-align: top;
 `
 const LinkWrapper = styled.div`
@@ -52,11 +52,12 @@ const NavigationWrapper = styled.div`
   top: 0;
   width: 40vw;
   max-width: 20em;
-  background: white;
+  background-color: #2A3D45;
   height: 100vh;
   border-left: 1px solid #ccc;
   transition: all 400ms ease;
   padding: 1em 1em 1em 1em;
+
   &.menu-open {
     right: 0;
   }
@@ -68,8 +69,23 @@ const Nav = styled.ul`
   gap: 1.5em;
 `
 
-export function Navigation () {
+export function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const boxRef = useRef(null);
+    const [boxOutsideClick, setBoxOutsideClick] = OutsideClick(boxRef);
+
+    useEffect(() => {
+        if (boxOutsideClick) {
+            setMenuOpen(false)
+        }
+    }, [boxOutsideClick])
+
+    useEffect(() => {
+        if (menuOpen) {
+            setBoxOutsideClick(false);
+        }
+    }, [menuOpen])
+
 
     return (
         <header>
@@ -83,7 +99,7 @@ export function Navigation () {
                             <rect y="60" width="100" height="20"></rect>
                         </svg>
                     </BurgerButton>
-                    <NavigationWrapper className={menuOpen ? 'menu-open' : ''}>
+                    <NavigationWrapper ref={boxRef} className={menuOpen ? 'menu-open' : ''}>
                         <CloseButton onClick={() => setMenuOpen(!menuOpen)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                  className="bi bi-x-lg" viewBox="0 0 16 16">
@@ -94,7 +110,7 @@ export function Navigation () {
                         <Nav className={menuOpen ? 'menu-open' : ''}>
                             <li>
                                 <DecoratedNavLink to="/" exac={'true'}>Home</DecoratedNavLink>
-                                </li>
+                            </li>
                             <li>
                                 <DecoratedNavLink to="/cv">CV</DecoratedNavLink>
                             </li>
@@ -124,6 +140,6 @@ export function Navigation () {
 }
 
 
-Navigation.propTypes = {};
+Header.propTypes = {};
 
-Navigation.defaultProps = {};
+Header.defaultProps = {};
