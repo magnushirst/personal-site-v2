@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
 export const Footer = () => {
     return (
         <StyledFooter>
-            <span>Copyright © 2022</span>
+            <span>Copyright© 2022</span>
         </StyledFooter>
     );
 };

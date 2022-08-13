@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { NestedNavigation } from "./nestedNavigation";
+import {DecoratedNavLink} from "../../atoms/decoratedNavLink/decoratedNavLink";
 
 const HeaderWrapper = styled.div`
   padding: 0 2em 0 2em;
@@ -92,27 +93,27 @@ export function Navigation () {
                         </CloseButton>
                         <Nav className={menuOpen ? 'menu-open' : ''}>
                             <li>
-                                <NavLink to="/" exact>Home</NavLink>
+                                <DecoratedNavLink to="/" exac={'true'}>Home</DecoratedNavLink>
                                 </li>
                             <li>
-                                <NavLink to="/cv">CV</NavLink>
+                                <DecoratedNavLink to="/cv">CV</DecoratedNavLink>
                             </li>
                             <NestedNavigation title={'Sandbox'}>
                                 <ul>
-                                    <li><NavLink to="/sandbox/1">Project 1</NavLink></li>
-                                    <li><NavLink to="/sandbox/2">Project 2</NavLink></li>
-                                    <li><NavLink to="/sandbox/3">Project 3</NavLink></li>
-                                    <li><NavLink to="/sandbox/4">Project 4</NavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/1">Project 1</DecoratedNavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/2">Project 2</DecoratedNavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/3">Project 3</DecoratedNavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/4">Project 4</DecoratedNavLink></li>
                                 </ul>
                                 <ul>
-                                    <li><NavLink to="/sandbox/5">Project 5</NavLink></li>
-                                    <li><NavLink to="/sandbox/6">Project 6</NavLink></li>
-                                    <li><NavLink to="/sandbox/7">Project 7</NavLink></li>
-                                    <li><NavLink to="/sandbox/8">Project 8</NavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/5">Project 5</DecoratedNavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/6">Project 6</DecoratedNavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/7">Project 7</DecoratedNavLink></li>
+                                    <li><DecoratedNavLink to="/sandbox/8">Project 8</DecoratedNavLink></li>
                                 </ul>
                             </NestedNavigation>
                             <li>
-                                <NavLink to="/contact">Contact</NavLink>
+                                <DecoratedNavLink to="/contact">Contact</DecoratedNavLink>
                             </li>
                         </Nav>
                     </NavigationWrapper>
