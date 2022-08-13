@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import React, {useState} from "react";
+import styled from 'styled-components';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import img from '../../../assets/chevron-down.svg';
-
 
 const Chevron = styled.i`
   transition: rotate 100ms ease;
@@ -18,7 +18,7 @@ const Chevron = styled.i`
   &.active{
     rotate: 180deg;
   }
-`
+`;
 const SubNav = styled.div`
   display: flex;
   position: relative;
@@ -38,16 +38,25 @@ const SubNav = styled.div`
     flex-direction: column;
     gap: 0.8em;
   }
-`
-export function NestedNavigation ({ title, children}) {
-    const [isOpen, setOpen] = useState(false);
-    return (
-        <li>
-            <a href={'#'} onClick={() => setOpen(!isOpen)} >{ title }</a>
-            <Chevron className={isOpen ? 'active' : ''} />
-            <SubNav className={isOpen ? 'active' : ''}>
-                { children }
-            </SubNav>
-        </li>
-    )
+`;
+export default function NestedNavigation({ title, children }) {
+  const [isOpen, setOpen] = useState(false);
+  return (
+    <li>
+      <a href="#" onClick={() => setOpen(!isOpen)}>{ title }</a>
+      <Chevron className={isOpen ? 'active' : ''} />
+      <SubNav className={isOpen ? 'active' : ''}>
+        { children }
+      </SubNav>
+    </li>
+  );
 }
+
+NestedNavigation.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.node.isRequired,
+};
+
+NestedNavigation.defaultProps = {
+  title: 'Title',
+};

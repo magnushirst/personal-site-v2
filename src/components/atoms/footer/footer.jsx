@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -11,12 +11,12 @@ const StyledFooter = styled.footer`
   padding-left: 2em;
   align-items: center;
   margin-top: 1em;
-`
+`;
 
-export const Footer = () => {
-    return (
-        <StyledFooter>
-            <span>Copyright© 2022</span>
-        </StyledFooter>
-    );
-};
+export default function Footer() {
+  return (
+    <StyledFooter>
+      <span>Copyright© 2022</span>
+    </StyledFooter>
+  );
+}

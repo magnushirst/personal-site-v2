@@ -1,7 +1,8 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import img from '../../../assets/chevron-right.svg';
-import styled from "styled-components";
 
 const Chevron = styled.i`
   content: '';
@@ -12,21 +13,22 @@ const Chevron = styled.i`
   width: .6em;
   margin-left: .5em;
   display: inline-block;
-`
+`;
 
-export const DecoratedNavLink = ({children, ...props }) => {
-    return (
-        <>
-            <NavLink {...props}>
-                {children}
-                <Chevron/>
-            </NavLink>
-        </>
-    );
-};
+export default function DecoratedNavLink({ children, to }) {
+  return (
+    <NavLink to={to}>
+      {children}
+      <Chevron />
+    </NavLink>
+  );
+}
 
 DecoratedNavLink.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string,
 };
 
 DecoratedNavLink.defaultProps = {
+  to: '/',
 };

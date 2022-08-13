@@ -5,6 +5,7 @@
 ## How to Run
 
 ## ToDo List
+- [x] Add linting
 - [ ] Add themes and option to change light/darm mode in UI
 - [ ] Storybook and Visual Regression testing
 - [ ] Pipeline for tests
