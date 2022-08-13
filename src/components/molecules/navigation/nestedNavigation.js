@@ -27,11 +27,11 @@ const SubNav = styled.div`
   gap: 1.5em;
   height: 0px;
   overflow: hidden;
+  transition: all 200ms ease;
   &.active {
     margin-top: 0.5em;
-    height: 100%;
+    height: 100px;
     padding: 0.5em;
-    transition: height 100ms ease;
   }
   & > ul {
     display: flex;

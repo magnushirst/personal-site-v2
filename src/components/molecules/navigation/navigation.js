@@ -45,25 +45,26 @@ const CloseButton = styled.button`
 `
 const NavigationWrapper = styled.div`
   z-index: 1;
-  display: none;
+  display: block;
   position: fixed;
-  right: 0;
+  right: -40vw;
   top: 0;
   width: 40vw;
   max-width: 20em;
   background: white;
   height: 100vh;
   border-left: 1px solid #ccc;
+  transition: all 400ms ease;
   padding: 1em 1em 1em 1em;
   &.menu-open {
-    display: block;
+    right: 0;
   }
 `
 const Nav = styled.ul`
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1.5em;
 `
 
 export function Navigation () {
