@@ -54,7 +54,7 @@ const NavigationWrapper = styled.div`
   max-width: 20em;
   background-color: #2A3D45;
   height: 100vh;
-  border-left: 1px solid #ccc;
+  border-left: 4px solid #DDC9B4;
   transition: all 400ms ease;
   padding: 1em 1em 1em 1em;
 
@@ -93,7 +93,7 @@ export function Header() {
                 <SiteTitle>Magnus Hirst</SiteTitle>
                 <LinkWrapper>
                     <BurgerButton onClick={() => setMenuOpen(!menuOpen)}>
-                        <svg viewBox="0 0 100 80" width="20" height="20" fill="currentColor">
+                        <svg viewBox="0 0 100 80" width="20" height="20" fill="#DDC9B4">
                             <rect width="100" height="20"></rect>
                             <rect y="30" width="100" height="20"></rect>
                             <rect y="60" width="100" height="20"></rect>
@@ -101,7 +101,7 @@ export function Header() {
                     </BurgerButton>
                     <NavigationWrapper ref={boxRef} className={menuOpen ? 'menu-open' : ''}>
                         <CloseButton onClick={() => setMenuOpen(!menuOpen)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#DDC9B4"
                                  className="bi bi-x-lg" viewBox="0 0 16 16">
                                 <path
                                     d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
