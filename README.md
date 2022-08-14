@@ -4,6 +4,11 @@
 
 ## How to Run
 
+Add git hooks to your local environment:
+```shell
+git config --local core.hooksPath .githooks/
+```
+
 ## ToDo List
 - [x] Add linting
 - [ ] Add themes and option to change light/darm mode in UI
