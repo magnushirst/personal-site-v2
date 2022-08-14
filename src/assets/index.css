@@ -32,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
   display: block;
 }
 body {
-  line-height: 1;
+  line-height: 1.4rem;
   color: white;
   background: #FFF0E5;
   font-size: 1rem;
@@ -64,6 +64,7 @@ a:visited {
 }
 
 p {
+  line-height: 1.4rem;
   margin: 1em 0;
 }
 #root{

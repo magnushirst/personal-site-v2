@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 const StyledH2 = styled.h1`
   font-weight: 900;
-  font-size: 32px;
+  font-size: 2.2rem;
   line-height: 1;
   vertical-align: top;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   display: block;
 `;
 

@@ -17,7 +17,7 @@ const Chevron = styled.i`
 
 export default function DecoratedNavLink({ children, to }) {
   return (
-    <NavLink to={to}>
+    <NavLink reloadDocument to={to}>
       {children}
       <Chevron />
     </NavLink>

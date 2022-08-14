@@ -32,6 +32,7 @@ const StyledListItem = styled.li`
     width: 1.6em;
     position: absolute;
     left: 0;
+    top: -0.3em;
   }
 `;
 
