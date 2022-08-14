@@ -53,7 +53,7 @@ const NavigationWrapper = styled.div`
   max-width: 20em;
   background-color: #2A3D45;
   height: 100vh;
-  border-left: 4px solid #DDC9B4;
+  border-left: 4px solid #C17C74;
   transition: all 400ms ease;
   padding: 1em 1em 1em 1em;
 
