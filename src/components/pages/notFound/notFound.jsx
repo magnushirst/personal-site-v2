@@ -8,7 +8,7 @@ import img from '../../../assets/siren.gif';
 import chevron from '../../../assets/chevron-right.svg';
 
 const LinkWrapper = styled.div`
-  border: 2px solid #2A3D45;
+  border: 4px solid #2A3D45;
   padding: 0.7em;
   margin-top: 1em;
   display: flex;
