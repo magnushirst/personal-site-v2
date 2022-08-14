@@ -12,8 +12,8 @@ git config --local core.hooksPath .githooks/
 ## ToDo List
 - [x] Add linting
 - [x] Investigate SSR
-- [ ] Investigate asset splitting
-- [ ] Add themes and option to change light/darm mode in UI
+- [x] Investigate asset splitting
+- [ ] Add themes and option to change light/dark mode in UI
 - [ ] Storybook and Visual Regression testing
 - [ ] Pipeline for tests
 - [ ] Deploy to Heroku or similar hosting platform

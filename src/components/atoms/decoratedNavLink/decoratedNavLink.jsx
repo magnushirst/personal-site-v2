@@ -1,12 +1,10 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import img from '../../../assets/chevron-right.svg';
 
 const Chevron = styled.i`
   content: '';
-  background-image: url(${img});
+  background-image: url('/img/chevron-right.svg');
   background-size: .6em .6em;
   background-repeat: no-repeat;
   height: .6em;
@@ -17,10 +15,10 @@ const Chevron = styled.i`
 
 export default function DecoratedNavLink({ children, to }) {
   return (
-    <NavLink reloadDocument to={to}>
+    <a href={to}>
       {children}
       <Chevron />
-    </NavLink>
+    </a>
   );
 }
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Section from '../../molecules/section/section';
-import Title from '../../atoms/title/title';
+import Section from '../src/components/molecules/section/section';
+import Title from '../src/components/atoms/title/title';
 
 export default function Contact() {
   return (

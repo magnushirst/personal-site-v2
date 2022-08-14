@@ -1,13 +1,12 @@
 import styled, { keyframes } from 'styled-components';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import img from '../../../assets/chevron-down.svg';
 
 const Chevron = styled.i`
   transition: rotate 100ms ease;
   display: inline-block;
   content: ' ';
-  background-image: url(${img});
+  background-image: url('/img/chevron-down.svg');
   background-size: 1em 1em;
   background-repeat: no-repeat;
   height: 1em;

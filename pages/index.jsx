@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Section from '../../molecules/section/section';
-import Title from '../../atoms/title/title';
-import WideSection from '../../molecules/wideSection/wideSection';
+import Section from '../src/components/molecules/section/section';
+import Title from '../src/components/atoms/title/title';
+import WideSection from '../src/components/molecules/wideSection/wideSection';
 
-export default function Home() {
+export default function Index() {
   return (
     <>
       <Section align="left">

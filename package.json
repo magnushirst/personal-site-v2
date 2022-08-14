@@ -5,8 +5,9 @@
   "main": "./src/index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack",
-    "start": "webpack serve",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
   "author": "Magnus Hirst",

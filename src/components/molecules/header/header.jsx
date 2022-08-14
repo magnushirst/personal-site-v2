@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-import NestedNavigation from '../../molecules/nestedNavigation/nestedNavigation';
+import NestedNavigation from '../nestedNavigation/nestedNavigation';
 import DecoratedNavLink from '../../atoms/decoratedNavLink/decoratedNavLink';
 import OutsideClick from '../../../hooks/outsideClick/outsideClick';
 
@@ -90,9 +89,9 @@ export default function Header() {
   return (
     <header>
       <HeaderWrapper>
-        <NavLink reloadDocument to="/">
+        <a href="/">
           <SiteTitle>Magnus Hirst</SiteTitle>
-        </NavLink>
+        </a>
         <LinkWrapper>
           <BurgerButton onClick={() => setMenuOpen(!menuOpen)}>
             <svg viewBox="0 0 100 80" width="20" height="20" fill="#DDC9B4">
