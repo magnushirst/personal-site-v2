@@ -5,11 +5,14 @@ import styled from 'styled-components';
 const primaryButtonColor = '#03fcfc';
 const secondaryButtonColor = '#d47d1a';
 
+const useSmallFontOrDefault = (props) => (props.buttonSize === 'small' ? '0.5em' : '1em');
+const useSmallPaddingOrDefault = (props) => (props.buttonSize === 'small' ? '.25rem .5rem' : '.5rem 1rem');
+
 const StyledButton = styled.button`
-  font-size: ${(props) => (props.buttonSize === 'large' ? '1.2em' : props.buttonSize === 'small' ? '0.5em' : '1em')};
+  font-size: ${(props) => (props.buttonSize === 'large' ? '1.2em' : useSmallFontOrDefault(props))};
   background: black;
   color: white;
-  padding: ${(props) => (props.buttonSize === 'large' ? '1rem 3rem' : props.buttonSize === 'small' ? '.25rem .5rem' : '.5rem 1rem')};
+  padding: ${(props) => (props.buttonSize === 'large' ? '1rem 3rem' : useSmallPaddingOrDefault(props))};
   box-shadow: ${(props) => (props.primary ? primaryButtonColor : secondaryButtonColor)} ${(props) => (props.buttonSize === 'small' ? '3px 3px 0' : '4px 4px 0')};
   transition: all 200ms ease;
   &:hover {

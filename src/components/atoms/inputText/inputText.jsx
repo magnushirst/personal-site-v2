@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
+const useSmallPaddingOrDefault = (props) => (props.buttonSize === 'small' ? '.25rem .5rem' : '.5rem 1rem');
+
 const StyledInput = styled.input`
-  padding: ${(props) => (props.buttonSize === 'large' ? '1rem 3rem' : props.buttonSize === 'small' ? '.25rem .5rem' : '.5rem 1rem')};
+  padding: ${(props) => (props.buttonSize === 'large' ? '1rem 3rem' : useSmallPaddingOrDefault(props))};
   box-shadow: #CCC 4px 4px 0;
   border-style: solid;
   border-width: 1px;

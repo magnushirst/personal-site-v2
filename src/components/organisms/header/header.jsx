@@ -22,6 +22,7 @@ const SiteTitle = styled.h1`
 const LinkWrapper = styled.div`
   display: flex;
   margin-left: auto;
+  font-size: 1.2rem;
 `;
 const BurgerButton = styled.button`
   height: 2em;

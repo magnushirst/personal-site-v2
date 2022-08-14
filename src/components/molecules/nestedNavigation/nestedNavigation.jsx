@@ -27,10 +27,11 @@ const SubNav = styled.div`
   gap: 1.5em;
   max-height: 0;
   overflow: hidden;
-  transition: all .3s;
-  padding-left: 0.5em;
+  transition: height .3s, margin-top .3s ;
+  border-left: 1px solid #DDC9B4;
   &.active {
-    margin-top: 1em;
+    padding: 0.3em 0 0.3em 0.5em;
+    margin: 1em 0 0 1em;
     max-height: 100vh;
   }
   & > ul {
@@ -39,13 +40,23 @@ const SubNav = styled.div`
     gap: 0.8em;
   }
 `;
+
+const Button = styled.button`
+  border: none;
+  background-color: unset;
+  color: inherit;
+  font-size: inherit;
+  padding: unset;
+  cursor: pointer;
+`;
+
 export default function NestedNavigation({ title, children }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <li>
-      <a href="#" onClick={() => setOpen(!isOpen)}>{ title }</a>
+      <Button type="button" onClick={() => setOpen(!isOpen)}>{ title }</Button>
       <Chevron className={isOpen ? 'active' : ''} />
-      <SubNav className={isOpen ? 'active' : ''}>
+      <SubNav className={isOpen ? 'active' : ''} aria-hidden={!isOpen}>
         { children }
       </SubNav>
     </li>
