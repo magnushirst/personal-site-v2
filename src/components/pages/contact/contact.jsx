@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Section from '../../atoms/section/section';
+import Section from '../../molecules/section/section';
 import Title from '../../atoms/title/title';
 
 export default function Contact() {

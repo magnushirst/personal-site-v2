@@ -4,13 +4,13 @@ import styled from 'styled-components';
 const StyledFooter = styled.footer`
   position: relative;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   background: #7A6C5D;
   height: 4em;
   display: flex;
   padding-left: 2em;
   align-items: center;
-  margin-top: 1em;
+  margin-top: 2em;
   color: #DDC9B4;
 `;
 

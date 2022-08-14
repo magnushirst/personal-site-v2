@@ -12,6 +12,7 @@ import Home from './components/pages/home/home';
 import Footer from './components/atoms/footer/footer';
 import Contact from './components/pages/contact/contact';
 import NotFound from './components/pages/notFound/notFound';
+import Cv from './components/pages/cv/cv';
 
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
@@ -26,6 +27,7 @@ root.render(
     <Main>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/cv" element={<Cv />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

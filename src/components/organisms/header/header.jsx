@@ -48,9 +48,9 @@ const NavigationWrapper = styled.div`
   z-index: 1;
   display: block;
   position: fixed;
-  right: -40vw;
+  right: -80vw;
   top: 0;
-  width: 40vw;
+  width: 80vw;
   max-width: 20em;
   background-color: #2A3D45;
   height: 100vh;

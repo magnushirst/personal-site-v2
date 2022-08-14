@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import img from '../../../assets/chevron-down.svg';
@@ -19,20 +19,23 @@ const Chevron = styled.i`
     rotate: 180deg;
   }
 `;
+const expand = keyframes`
+  from { max-height: 0; }
+  to { max-height: 100vh; }
+`;
 const SubNav = styled.div`
-  display: flex;
   position: relative;
   justify-content: left;
   flex-wrap: wrap;
   gap: 1.5em;
-  max-height: 0;
   overflow: hidden;
-  transition: height .3s, margin-top .3s ;
   border-left: 1px solid #DDC9B4;
+  display: none;
   &.active {
+    display: flex;
     padding: 0.3em 0 0.3em 0.5em;
     margin: 1em 0 0 1em;
-    max-height: 100vh;
+    animation: ${expand} 1s forwards;
   }
   & > ul {
     display: flex;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Section from '../../atoms/section/section';
+import Section from '../../molecules/section/section';
 import Title from '../../atoms/title/title';
 import img from '../../../assets/siren.gif';
 import chevron from '../../../assets/chevron-right.svg';
