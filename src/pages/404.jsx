@@ -42,7 +42,7 @@ export default function NotFound() {
       <p>
         The page you are looking for could not be found
       </p>
-      <a href="/src/pages">
+      <a href="/">
         <LinkWrapper>
           Click here to go back
           <Chevron />
