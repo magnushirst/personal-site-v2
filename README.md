@@ -4,9 +4,16 @@
 
 ## How to Run
 
-Add git hooks to your local environment:
+For Development:
 ```shell
 git config --local core.hooksPath .githooks/
+npm run lint
+npm run dev
+```
+For Production:
+```shell
+npm run build
+npm run start
 ```
 
 ## ToDo List

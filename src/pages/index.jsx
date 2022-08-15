@@ -8,7 +8,7 @@ export default function Index() {
   return (
     <>
       <Section align="left">
-        <Title>URL Shortener</Title>
+        <Title>Placeholder Title</Title>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit,
           sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -37,7 +37,7 @@ export default function Index() {
         </p>
       </Section>
       <WideSection align="left">
-        <Title>URL Shortener</Title>
+        <Title>Placeholder Title</Title>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -65,7 +65,7 @@ export default function Index() {
         </p>
       </WideSection>
       <Section align="left">
-        <Title>URL Shortener</Title>
+        <Title>Placeholder Title</Title>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
