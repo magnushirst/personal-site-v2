@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Sandbox site to hold any projects or code snippets",
   "main": "./src/index.js",
+  "cacheDirectories": [".next/cache"],
   "scripts": {
     "test": "jest",
     "dev": "next dev",

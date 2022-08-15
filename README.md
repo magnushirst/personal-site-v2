@@ -1,5 +1,9 @@
 # Portfolio Website
 
+Access the website here: https://mh-personal-site.herokuapp.com/
+
+This is hosted on Heroku so cold starts will make your first request to be slower than normal.
+
 ## Design
 
 ## How to Run

@@ -1,0 +1,37 @@
+{
+  "name": "Personal Site v2",
+  "description": "A little website to practice using React, NextJS, Redux etc.",
+  "keywords": [],
+  "website": "https://github.com/magnushirst/personal-site-v2",
+  "repository": "https://github.com/magnushirst/personal-site-v2",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "success_url": "/",
+  "scripts": {
+    "postdeploy": "bundle exec rake bootstrap"
+  },
+  "env": {
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "1"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "npm run lint"
+      }
+    }
+  }
+}
