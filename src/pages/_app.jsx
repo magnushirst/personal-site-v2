@@ -5,6 +5,7 @@ import { IntlProvider } from 'react-intl';
 import Head from 'next/head';
 import BasicLayout from '../components/organisms/basicLayout/basicLayout';
 import '../../public/index.css';
+// eslint-disable-next-line import/no-unresolved
 import English from '../../content/compiled-locales/en.json';
 
 export default function MyApp({ Component, pageProps }) {
