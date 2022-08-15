@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Head from 'next/head';
-import BasicLayout from '../src/components/organisms/basicLayout/basicLayout';
-import '../public/index.css';
+import BasicLayout from '../components/organisms/basicLayout/basicLayout';
+import '../../public/index.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -23,7 +23,7 @@ export default function MyApp({ Component, pageProps }) {
 }
 
 MyApp.propTypes = {
-  Component: PropTypes.node.isRequired,
+  Component: PropTypes.elementType.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
   pageProps: PropTypes.object,
 };

@@ -1,9 +1,8 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import Section from '../src/components/molecules/section/section';
-import Title from '../src/components/atoms/title/title';
-import img from '../public/img/siren.gif';
+import Section from '../components/molecules/section/section';
+import Title from '../components/atoms/title/title';
 
 const LinkWrapper = styled.div`
   border: 4px solid #2A3D45;
@@ -43,7 +42,7 @@ export default function NotFound() {
       <p>
         The page you are looking for could not be found
       </p>
-      <a to="/">
+      <a href="/src/pages">
         <LinkWrapper>
           Click here to go back
           <Chevron />

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Section from '../src/components/molecules/section/section';
-import Title from '../src/components/atoms/title/title';
-import WideSection from '../src/components/molecules/wideSection/wideSection';
+import Section from '../components/molecules/section/section';
+import Title from '../components/atoms/title/title';
+import WideSection from '../components/molecules/wideSection/wideSection';
 
 export default function Index() {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import Section from '../src/components/molecules/section/section';
-import Title from '../src/components/atoms/title/title';
-import WideSection from '../src/components/molecules/wideSection/wideSection';
-import LinkedList from '../src/components/atoms/linkedList/linkedList';
+import Section from '../components/molecules/section/section';
+import Title from '../components/atoms/title/title';
+import WideSection from '../components/molecules/wideSection/wideSection';
+import LinkedList from '../components/atoms/linkedList/linkedList';
 
 const CvBlock = styled.div`
   max-width: 40em;

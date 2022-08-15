@@ -39,8 +39,9 @@ const StyledListItem = styled.li`
 export default function LinkedList({ children }) {
   return (
     <StyledList>
-      {children.map((child) => (
-        <div>
+      {children.map((child, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={i}>
           <StyledListItem>{ child }</StyledListItem>
           {' '}
         </div>
