@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "description": "Sandbox site to hold any projects or code snippets",
   "main": "./src/index.js",
-  "cacheDirectories": [".next/cache"],
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "scripts": {
     "test": "jest",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build; npm run compile:i18n",
     "start": "next start",
-    "lint": "eslint src/**/*.js src/**/*.jsx"
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "extract:i18n": "formatjs extract 'src/pages/index.jsx' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/en.json",
+    "compile:i18n": "formatjs compile-folder --ast --format simple content/locales content/compiled-locales",
+    "i18n": "npm run compile:i18n"
   },
   "author": "Magnus Hirst",
   "license": "ISC",
   "devDependencies": {
+    "@formatjs/cli": "^5.0.7",
+    "babel-plugin-formatjs": "^10.3.25",
     "css-loader": "^6.7.1",
     "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -33,18 +40,20 @@
     "@babel/preset-env": "^7.18.10",
     "@babel/preset-react": "^7.18.6",
     "babel-loader": "^8.2.5",
+    "formatjs": "^0.1.1",
     "html-webpack-plugin": "^5.5.0",
     "next": "^12.2.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intl": "^6.0.5",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
     "styled-components": "^5.3.5",
     "url-loader": "^4.1.1"
   },
-  "engines" : {
-    "npm" : ">=8.1.2",
-    "node" : ">=16.13.2"
+  "engines": {
+    "npm": ">=8.1.2",
+    "node": ">=16.13.2"
   }
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 import NestedNavigation from '../nestedNavigation/nestedNavigation';
 import DecoratedNavLink from '../../atoms/decoratedNavLink/decoratedNavLink';
 import OutsideClick from '../../../hooks/outsideClick/outsideClick';
@@ -90,7 +91,9 @@ export default function Header() {
     <header>
       <HeaderWrapper>
         <a href="/">
-          <SiteTitle>Magnus Hirst</SiteTitle>
+          <SiteTitle>
+            <FormattedMessage id="site.header.title" />
+          </SiteTitle>
         </a>
         <LinkWrapper>
           <BurgerButton onClick={() => setMenuOpen(!menuOpen)}>
@@ -117,12 +120,16 @@ export default function Header() {
             </CloseButton>
             <Nav className={menuOpen ? 'menu-open' : ''}>
               <li>
-                <DecoratedNavLink to="/" exac="true">Home</DecoratedNavLink>
+                <DecoratedNavLink to="/" exac="true">
+                  <FormattedMessage id="site.header.nav.home" />
+                </DecoratedNavLink>
               </li>
               <li>
-                <DecoratedNavLink to="/cv">CV</DecoratedNavLink>
+                <DecoratedNavLink to="/cv">
+                  <FormattedMessage id="site.header.nav.cv" />
+                </DecoratedNavLink>
               </li>
-              <NestedNavigation title="Sandbox">
+              <NestedNavigation title="site.header.nav.sandbox">
                 <ul>
                   <li><DecoratedNavLink to="/sandbox/1">Project 1</DecoratedNavLink></li>
                   <li><DecoratedNavLink to="/sandbox/2">Project 2</DecoratedNavLink></li>
@@ -137,7 +144,9 @@ export default function Header() {
                 </ul>
               </NestedNavigation>
               <li>
-                <DecoratedNavLink to="/contact">Contact</DecoratedNavLink>
+                <DecoratedNavLink to="/contact">
+                  <FormattedMessage id="site.header.nav.contact" />
+                </DecoratedNavLink>
               </li>
             </Nav>
           </NavigationWrapper>

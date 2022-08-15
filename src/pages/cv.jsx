@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 import Section from '../components/molecules/section/section';
 import Title from '../components/atoms/title/title';
 import WideSection from '../components/molecules/wideSection/wideSection';
@@ -32,6 +33,7 @@ const JobDuration = styled.span`
 const JobDescription = styled.div`
   padding-left: 1em;
   margin-top: 1em;
+
   & > ul > li {
     margin: 1em 0;
   }
@@ -40,162 +42,99 @@ export default function Cv() {
   return (
     <>
       <WideSection align="left">
-        <Title>Curriculum Vitae</Title>
+        <Title>
+          <FormattedMessage id="cv.title" />
+        </Title>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          <FormattedMessage id="cv.1.paragraph" />
         </p>
       </WideSection>
       <Section align="left">
         <LinkedList>
           <CvBlock>
             <JobInfo>
-              <JobTitle>Engineering Manager</JobTitle>
-              <CompanyName>gousto · Full-time</CompanyName>
-              <JobDuration>Jul 2022 - Present</JobDuration>
+              <JobTitle><FormattedMessage id="cv.job.1.title" /></JobTitle>
+              <CompanyName><FormattedMessage id="cv.job.1.company" /></CompanyName>
+              <JobDuration><FormattedMessage id="cv.job.1.duration" /></JobDuration>
             </JobInfo>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle>Tech Lead of Member</JobTitle>
-              <CompanyName>giffgaff · Full-time</CompanyName>
-              <JobDuration>Jan 2019 - Jul 2022 · 3 yrs 7 mos</JobDuration>
+              <JobTitle><FormattedMessage id="cv.job.2.title" /></JobTitle>
+              <CompanyName><FormattedMessage id="cv.job.2.company" /></CompanyName>
+              <JobDuration><FormattedMessage id="cv.job.2.duration" /></JobDuration>
             </JobInfo>
             <JobDescription>
               <ul>
-                <li>
-                  - Managed Front End (ReactJS), Mobile (React Native)
-                  and Backend (Java) flows for our domain
-                </li>
-                <li>
-                  - Improved GDPR Compliancy for member data and account access
-                </li>
-                <li>
-                  - Migrated core account access flows from legacy PHP to ReactJS
-                </li>
-                <li>
-                  - Managed core member backend microservices in Java Spring Boot
-                </li>
-                <li>
-                  - Designed event driven dashboard personalisation functionality
-                </li>
-                <li>
-                  - Designed and implemented MFA to protect member accounts
-                </li>
+                <li><FormattedMessage id="cv.job.2.description.1" /></li>
+                <li><FormattedMessage id="cv.job.2.description.2" /></li>
+                <li><FormattedMessage id="cv.job.2.description.3" /></li>
+                <li><FormattedMessage id="cv.job.2.description.4" /></li>
+                <li><FormattedMessage id="cv.job.2.description.5" /></li>
+                <li><FormattedMessage id="cv.job.2.description.6" /></li>
+                <li><FormattedMessage id="cv.job.2.description.7" /></li>
               </ul>
             </JobDescription>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle>Software Engineer</JobTitle>
-              <CompanyName>Tesco PLC</CompanyName>
-              <JobDuration>Sep 2014 - Jan 2019 · 4 yrs 6 mos</JobDuration>
+              <JobTitle><FormattedMessage id="cv.job.3.title" /></JobTitle>
+              <CompanyName><FormattedMessage id="cv.job.3.company" /></CompanyName>
+              <JobDuration><FormattedMessage id="cv.job.3.duration" /></JobDuration>
             </JobInfo>
             <JobDescription>
               <ul>
-                <li>
-                  - Developed the Identity Services for Customers, Colleagues and 3rd Parties
-                </li>
-                <li>
-                  - Designed and implemented the Clubcard Rollout to 100m Customers with a focus on
-                  customer identity and authentication
-                </li>
-                <li>
-                  - Improved CICD processes with Kubernetes, Helm and Jenkins in AWS of backend
-                  microservices
-                </li>
-                <li>
-                  - Created automated pipelines using ansible to deploy and manage MongoDB clusters
-                </li>
-                <li>
-                  - Created an internal system to manage AWS infrastructure integrations with
-                  in-house data centres
-                </li>
-                <li>
-                  - Created a POC native app and backend service for a colleague paging system for
-                  use in store
-                </li>
-                <li>
-                  - Worked in the graduate recruitment team to help create a better technology
-                  recruitment process and mentored junior engineers
-                </li>
-                <li>
-                  - Worked in India for 3 months to project manage and help QA
-                </li>
-                <li>
-                  - Managed and implemented a project working with a 3rd party hardware company to
-                  implement a new time keeping process in warehouses
-                </li>
+                <li><FormattedMessage id="cv.job.3.description.1" /></li>
+                <li><FormattedMessage id="cv.job.3.description.2" /></li>
+                <li><FormattedMessage id="cv.job.3.description.3" /></li>
+                <li><FormattedMessage id="cv.job.3.description.4" /></li>
+                <li><FormattedMessage id="cv.job.3.description.5" /></li>
+                <li><FormattedMessage id="cv.job.3.description.6" /></li>
+                <li><FormattedMessage id="cv.job.3.description.7" /></li>
+                <li><FormattedMessage id="cv.job.3.description.8" /></li>
+                <li><FormattedMessage id="cv.job.3.description.9" /></li>
               </ul>
             </JobDescription>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle>PHP Developer</JobTitle>
-              <CompanyName>Opus-UK Limited</CompanyName>
-              <JobDuration>Jul 2013 - Oct 2013 · 4 mos</JobDuration>
+              <JobTitle><FormattedMessage id="cv.job.4.title" /></JobTitle>
+              <CompanyName><FormattedMessage id="cv.job.4.company" /></CompanyName>
+              <JobDuration><FormattedMessage id="cv.job.4.duration" /></JobDuration>
             </JobInfo>
             <JobDescription>
-              <p>
-                Time over the summer between my Industrial placement and University was spent
-                developing an internal system to:
-              </p>
+              <p><FormattedMessage id="cv.job.4.description.1" /></p>
               <ul>
-                <li>
-                  - Aid the sales team at Opus to create quotes faster and more efficiently for
-                  off-site staff.
-                </li>
-                <li>
-                  - Generate PDF invoices which can be emailed to the customer.
-                </li>
-                <li>
-                  - Integrate the process with Sage.
-                </li>
-                <li>
-                  - Generate reports of users&apos; sales statistics for themselves and managers.
-                </li>
+                <li><FormattedMessage id="cv.job.4.description.2" /></li>
+                <li><FormattedMessage id="cv.job.4.description.3" /></li>
+                <li><FormattedMessage id="cv.job.4.description.4" /></li>
+                <li><FormattedMessage id="cv.job.4.description.5" /></li>
               </ul>
             </JobDescription>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle>IT Finance Intern</JobTitle>
-              <CompanyName>ICAP</CompanyName>
-              <JobDuration>Jul 2012 - Jun 2013 · 1 yr</JobDuration>
+              <JobTitle><FormattedMessage id="cv.job.5.title" /></JobTitle>
+              <CompanyName><FormattedMessage id="cv.job.5.company" /></CompanyName>
+              <JobDuration><FormattedMessage id="cv.job.5.duration" /></JobDuration>
             </JobInfo>
             <JobDescription>
-              <p>
-                University placement. Working with Oracle Financials, Essbase, Hyperion Financial
-                Reporting and ASP.NET development
-              </p>
+              <p><FormattedMessage id="cv.job.5.description.1" /></p>
             </JobDescription>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle>Web Programmer</JobTitle>
-              <CompanyName>OPUS UK LTD</CompanyName>
-              <JobDuration>Aug 2011 - Oct 2011 · 3 mos</JobDuration>
+              <JobTitle><FormattedMessage id="cv.job.6.title" /></JobTitle>
+              <CompanyName><FormattedMessage id="cv.job.6.company" /></CompanyName>
+              <JobDuration><FormattedMessage id="cv.job.6.duration" /></JobDuration>
             </JobInfo>
             <JobDescription>
-              <p>
-                Time over the summer between my Industrial placement and University was spent
-                developing an internal system to:
-              </p>
+              <p><FormattedMessage id="cv.job.6.description.1" /></p>
               <ul>
-                <li>
-                  - Aid the sales team at Opus to create quotes faster and more efficiently for
-                  off-site staff.
-                </li>
-                <li>
-                  - Generate PDF invoices which can be emailed to the customer.
-                </li>
-                <li>
-                  - Integrate the process with Sage.
-                </li>
-                <li>
-                  - Generate reports of users&apos; sales statistics for themselves and managers.
-                </li>
+                <li><FormattedMessage id="cv.job.6.description.2" /></li>
+                <li><FormattedMessage id="cv.job.6.description.3" /></li>
+                <li><FormattedMessage id="cv.job.6.description.4" /></li>
+                <li><FormattedMessage id="cv.job.6.description.5" /></li>
               </ul>
             </JobDescription>
           </CvBlock>

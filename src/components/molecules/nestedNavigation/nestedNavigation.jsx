@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 
 const Chevron = styled.i`
   transition: rotate 100ms ease;
@@ -58,7 +59,7 @@ export default function NestedNavigation({ title, children }) {
   return (
     <li>
       <Button type="button" onClick={() => setOpen(!isOpen)}>
-        { title }
+        <FormattedMessage id={title} />
         <Chevron className={isOpen ? 'active' : ''} />
       </Button>
       <SubNav className={isOpen ? 'active' : ''} aria-hidden={!isOpen}>
