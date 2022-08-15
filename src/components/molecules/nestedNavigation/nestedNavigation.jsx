@@ -11,7 +11,7 @@ const Chevron = styled.i`
   background-repeat: no-repeat;
   height: 1em;
   width: 1em;
-  position: fixed;
+  position: relative;
   margin-left: 1em;
 
   &.active{
@@ -50,14 +50,17 @@ const Button = styled.button`
   font-size: inherit;
   padding: unset;
   cursor: pointer;
+  display: flex;
 `;
 
 export default function NestedNavigation({ title, children }) {
   const [isOpen, setOpen] = useState(false);
   return (
     <li>
-      <Button type="button" onClick={() => setOpen(!isOpen)}>{ title }</Button>
-      <Chevron className={isOpen ? 'active' : ''} />
+      <Button type="button" onClick={() => setOpen(!isOpen)}>
+        { title }
+        <Chevron className={isOpen ? 'active' : ''} />
+      </Button>
       <SubNav className={isOpen ? 'active' : ''} aria-hidden={!isOpen}>
         { children }
       </SubNav>
