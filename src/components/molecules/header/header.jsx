@@ -43,7 +43,7 @@ const CloseButton = styled.button`
   padding: 0;
   cursor: pointer;
   outline: inherit;
-  margin-bottom: 1.2em;
+  margin-bottom: 3em;
 `;
 const NavigationWrapper = styled.div`
   z-index: 1;
@@ -107,8 +107,8 @@ export default function Header() {
             <CloseButton onClick={() => setMenuOpen(!menuOpen)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
+                width="32"
+                height="32"
                 fill="#DDC9B4"
                 className="bi bi-x-lg"
                 viewBox="0 0 16 16"

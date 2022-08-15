@@ -12,12 +12,19 @@ const CvBlock = styled.div`
 `;
 
 const JobInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:  1em;
 `;
-
+const CompanyLogo = styled.img`
+  height: 4em;
+`;
 const JobTitle = styled.h3`
   font-size: 1.4rem;
   font-weight: 600;
   padding-bottom: .5em;
+  line-height: 1.4em;
 `;
 const CompanyName = styled.span`
   display: block;
@@ -53,16 +60,22 @@ export default function Cv() {
         <LinkedList>
           <CvBlock>
             <JobInfo>
-              <JobTitle><FormattedMessage id="cv.job.1.title" /></JobTitle>
-              <CompanyName><FormattedMessage id="cv.job.1.company" /></CompanyName>
-              <JobDuration><FormattedMessage id="cv.job.1.duration" /></JobDuration>
+              <CompanyLogo src="/img/gousto.png" alt="Gousto Logo" />
+              <div>
+                <JobTitle><FormattedMessage id="cv.job.1.title" /></JobTitle>
+                <CompanyName><FormattedMessage id="cv.job.1.company" /></CompanyName>
+                <JobDuration><FormattedMessage id="cv.job.1.duration" /></JobDuration>
+              </div>
             </JobInfo>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle><FormattedMessage id="cv.job.2.title" /></JobTitle>
-              <CompanyName><FormattedMessage id="cv.job.2.company" /></CompanyName>
-              <JobDuration><FormattedMessage id="cv.job.2.duration" /></JobDuration>
+              <CompanyLogo src="/img/giffgaff.png" alt="giffgaff Logo" />
+              <div>
+                <JobTitle><FormattedMessage id="cv.job.2.title" /></JobTitle>
+                <CompanyName><FormattedMessage id="cv.job.2.company" /></CompanyName>
+                <JobDuration><FormattedMessage id="cv.job.2.duration" /></JobDuration>
+              </div>
             </JobInfo>
             <JobDescription>
               <ul>
@@ -72,15 +85,17 @@ export default function Cv() {
                 <li><FormattedMessage id="cv.job.2.description.4" /></li>
                 <li><FormattedMessage id="cv.job.2.description.5" /></li>
                 <li><FormattedMessage id="cv.job.2.description.6" /></li>
-                <li><FormattedMessage id="cv.job.2.description.7" /></li>
               </ul>
             </JobDescription>
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle><FormattedMessage id="cv.job.3.title" /></JobTitle>
-              <CompanyName><FormattedMessage id="cv.job.3.company" /></CompanyName>
-              <JobDuration><FormattedMessage id="cv.job.3.duration" /></JobDuration>
+              <CompanyLogo src="/img/tesco.png" alt="Tesco Logo" />
+              <div>
+                <JobTitle><FormattedMessage id="cv.job.3.title" /></JobTitle>
+                <CompanyName><FormattedMessage id="cv.job.3.company" /></CompanyName>
+                <JobDuration><FormattedMessage id="cv.job.3.duration" /></JobDuration>
+              </div>
             </JobInfo>
             <JobDescription>
               <ul>
@@ -98,9 +113,12 @@ export default function Cv() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle><FormattedMessage id="cv.job.4.title" /></JobTitle>
-              <CompanyName><FormattedMessage id="cv.job.4.company" /></CompanyName>
-              <JobDuration><FormattedMessage id="cv.job.4.duration" /></JobDuration>
+              <CompanyLogo src="/img/opus.jfif" alt="Opus Uk Logo" />
+              <div>
+                <JobTitle><FormattedMessage id="cv.job.4.title" /></JobTitle>
+                <CompanyName><FormattedMessage id="cv.job.4.company" /></CompanyName>
+                <JobDuration><FormattedMessage id="cv.job.4.duration" /></JobDuration>
+              </div>
             </JobInfo>
             <JobDescription>
               <p><FormattedMessage id="cv.job.4.description.1" /></p>
@@ -114,9 +132,12 @@ export default function Cv() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle><FormattedMessage id="cv.job.5.title" /></JobTitle>
-              <CompanyName><FormattedMessage id="cv.job.5.company" /></CompanyName>
-              <JobDuration><FormattedMessage id="cv.job.5.duration" /></JobDuration>
+              <CompanyLogo src="/img/icap.png" alt="ICAP Logo" />
+              <div>
+                <JobTitle><FormattedMessage id="cv.job.5.title" /></JobTitle>
+                <CompanyName><FormattedMessage id="cv.job.5.company" /></CompanyName>
+                <JobDuration><FormattedMessage id="cv.job.5.duration" /></JobDuration>
+              </div>
             </JobInfo>
             <JobDescription>
               <p><FormattedMessage id="cv.job.5.description.1" /></p>
@@ -124,9 +145,12 @@ export default function Cv() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <JobTitle><FormattedMessage id="cv.job.6.title" /></JobTitle>
-              <CompanyName><FormattedMessage id="cv.job.6.company" /></CompanyName>
-              <JobDuration><FormattedMessage id="cv.job.6.duration" /></JobDuration>
+              <CompanyLogo src="/img/opus.jfif" alt="Opus Uk Logo" />
+              <div>
+                <JobTitle><FormattedMessage id="cv.job.6.title" /></JobTitle>
+                <CompanyName><FormattedMessage id="cv.job.6.company" /></CompanyName>
+                <JobDuration><FormattedMessage id="cv.job.6.duration" /></JobDuration>
+              </div>
             </JobInfo>
             <JobDescription>
               <p><FormattedMessage id="cv.job.6.description.1" /></p>

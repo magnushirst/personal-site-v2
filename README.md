@@ -12,6 +12,7 @@ For Development:
 ```shell
 git config --local core.hooksPath .githooks/
 npm run lint
+npm run i18n
 npm run dev
 ```
 For Production:
@@ -24,6 +25,7 @@ npm run start
 - [x] Add linting
 - [x] Investigate SSR
 - [x] Investigate asset splitting
+- [x] Add locale support (en only is fine)
 - [ ] Add themes and option to change light/dark mode in UI
 - [ ] Storybook and Visual Regression testing
 - [ ] Pipeline for tests

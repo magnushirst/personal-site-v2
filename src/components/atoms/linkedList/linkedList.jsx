@@ -17,6 +17,7 @@ const StyledList = styled.ul`
     height: 100%;
     position: absolute;
     left: .7em;
+    top: 1.1em;
   }
 `;
 
@@ -32,7 +33,7 @@ const StyledListItem = styled.li`
     width: 1.6em;
     position: absolute;
     left: 0;
-    top: -0.3em;
+    top: 1.1em;
   }
 `;
 
