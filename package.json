@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "dev": "next dev",
-    "build": "next build; npm run compile:i18n",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "extract:i18n": "formatjs extract 'src/pages/index.jsx' --format simple --id-interpolation-pattern '[sha512:contenthash:base64:6]' --out-file content/locales/en.json",
