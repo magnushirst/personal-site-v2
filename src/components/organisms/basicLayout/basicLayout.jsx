@@ -8,12 +8,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: ${(props) => props.theme.colors.base};
 `;
 const CustomMain = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: ${(props) => props.theme.colors.base};
 `;
 function BasicLayout({ children }) {
   return (
