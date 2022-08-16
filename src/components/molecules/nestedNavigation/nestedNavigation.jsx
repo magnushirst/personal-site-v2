@@ -29,7 +29,7 @@ const SubNav = styled.div`
   flex-wrap: wrap;
   gap: 1.5em;
   overflow: hidden;
-  border-left: 1px solid #DDC9B4;
+  border-left: 1px solid ${(props) => props.theme.colors.base};
   display: none;
   &.active {
     display: flex;

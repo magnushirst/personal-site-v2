@@ -5,12 +5,12 @@ import Section from '../components/molecules/section/section';
 import Title from '../components/atoms/title/title';
 
 const LinkWrapper = styled.div`
-  border: 4px solid #2A3D45;
+  border: 4px solid ${(props) => props.theme.colors.contrast};
   padding: 0.7em;
   margin-top: 1em;
   display: flex;
   &:hover{
-    background-color: #C17C74;
+    background-color: ${(props) => props.theme.colors.highlight};
   }
 `;
 const Chevron = styled.i`

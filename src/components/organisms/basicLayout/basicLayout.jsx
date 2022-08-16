@@ -13,6 +13,7 @@ const CustomMain = styled.main`
   display: flex;
   flex-direction: column;
   flex: 1;
+  background: ${(props) => props.theme.colors.base};
 `;
 function BasicLayout({ children }) {
   return (

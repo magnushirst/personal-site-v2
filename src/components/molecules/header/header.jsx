@@ -10,8 +10,8 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  background-color: #2A3D45;
-  color: #DDC9B4;
+  background-color: ${(props) => props.theme.colors.contrast};
+  color: ${(props) => props.theme.colors.base};
 `;
 const SiteTitle = styled.h1`
   padding: 1em 0;
@@ -53,9 +53,9 @@ const NavigationWrapper = styled.div`
   top: 0;
   width: 80vw;
   max-width: 20em;
-  background-color: #2A3D45;
+  background-color: ${(props) => props.theme.colors.contrast};
   height: 100vh;
-  border-left: 4px solid #C17C74;
+  border-left: 4px solid ${(props) => props.theme.colors.highlight};
   transition: all 400ms ease;
   padding: 1em 1em 1em 1em;
 

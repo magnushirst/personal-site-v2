@@ -12,7 +12,7 @@ const StyledList = styled.ul`
   }
   & > div:not(:last-child) > li:after{
     content: '';
-    background-color: #C17C74;
+    background-color: ${(props) => props.theme.colors.highlight};
     width: .2em;
     height: 100%;
     position: absolute;
@@ -27,7 +27,7 @@ const StyledListItem = styled.li`
   justify-content: left;
   &:before {
     content: '';
-    background-color: #C17C74;
+    background-color: ${(props) => props.theme.colors.highlight};
     border-radius: 100%;
     height: 1.6em;
     width: 1.6em;
