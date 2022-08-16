@@ -29,7 +29,7 @@ npm run start
 - [ ] Add themes and option to change light/dark mode in UI
 - [ ] Storybook and Visual Regression testing
 - [ ] Pipeline for tests
-- [ ] Deploy to Heroku or similar hosting platform
+- [x] Deploy to Heroku or similar hosting platform
 - [ ] Add CV
 - [ ] Add Tiny URL Kata
 - [ ] Add Map Kata
