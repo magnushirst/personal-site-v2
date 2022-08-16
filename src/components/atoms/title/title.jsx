@@ -9,6 +9,7 @@ const StyledH2 = styled.h1`
   vertical-align: top;
   margin-bottom: .5em;
   display: block;
+  font-family: ${(props) => props.theme.font};
 `;
 
 export default function Title({ children }) {
@@ -20,6 +21,9 @@ export default function Title({ children }) {
 }
 
 Title.propTypes = {
+  /**
+   * The children of the element which are rendered within the Title
+   */
   children: PropTypes.node.isRequired,
 };
 

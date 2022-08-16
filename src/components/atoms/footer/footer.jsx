@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FormattedMessage } from 'react-intl';
 
 const StyledFooter = styled.footer`
   position: relative;
@@ -17,7 +18,9 @@ const StyledFooter = styled.footer`
 export default function Footer() {
   return (
     <StyledFooter>
-      <span>Copyright© 2022</span>
+      <span>
+        <FormattedMessage id="site.footer.copyright" />
+      </span>
     </StyledFooter>
   );
 }

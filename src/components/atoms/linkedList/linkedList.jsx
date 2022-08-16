@@ -17,7 +17,7 @@ const StyledList = styled.ul`
     height: 100%;
     position: absolute;
     left: .7em;
-    top: 1.1em;
+    top: ${(props) => props.offset};
   }
 `;
 
@@ -33,17 +33,17 @@ const StyledListItem = styled.li`
     width: 1.6em;
     position: absolute;
     left: 0;
-    top: 1.1em;
+    top: ${(props) => props.offset};
   }
 `;
 
-export default function LinkedList({ children }) {
+export default function LinkedList({ offset, children }) {
   return (
-    <StyledList>
+    <StyledList offset={offset}>
       {children.map((child, i) => (
         // eslint-disable-next-line react/no-array-index-key
         <div key={i}>
-          <StyledListItem>{ child }</StyledListItem>
+          <StyledListItem offset={offset}>{ child }</StyledListItem>
           {' '}
         </div>
       ))}
@@ -52,8 +52,16 @@ export default function LinkedList({ children }) {
 }
 
 LinkedList.propTypes = {
+  /**
+   * The offset of the bubble to the list item (1em, 2px)
+   */
+  offset: PropTypes.string,
+  /**
+   * The children of the element which are rendered within the Title
+   */
   children: PropTypes.node.isRequired,
 };
 
 LinkedList.defaultProps = {
+  offset: '0',
 };

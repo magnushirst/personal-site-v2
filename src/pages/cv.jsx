@@ -57,7 +57,7 @@ export default function Cv() {
         </p>
       </WideSection>
       <Section align="left">
-        <LinkedList>
+        <LinkedList offset="1.1em">
           <CvBlock>
             <JobInfo>
               <CompanyLogo src="/img/gousto.png" alt="Gousto Logo" />
