@@ -2,10 +2,16 @@ import React from 'react';
 
 import styled from 'styled-components';
 import { FormattedMessage } from 'react-intl';
+import Image from 'next/image';
 import Section from '../../molecules/section/section';
 import Title from '../../atoms/title/title';
 import WideSection from '../../molecules/wideSection/wideSection';
 import LinkedList from '../../atoms/linkedList/linkedList';
+import goustoLogo from '../../../../public/img/gousto.png';
+import giffgaffLogo from '../../../../public/img/giffgaff.png';
+import tescoLogo from '../../../../public/img/tesco.png';
+import icapLogo from '../../../../public/img/icap.png';
+import opusLogo from '../../../../public/img/opus.jpg';
 
 const CvBlock = styled.div`
   max-width: 40em;
@@ -16,9 +22,6 @@ const JobInfo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap:  1em;
-`;
-const CompanyLogo = styled.img`
-  height: 4em;
 `;
 const JobTitle = styled.h3`
   font-size: 1.4rem;
@@ -56,10 +59,10 @@ export default function CvBody() {
         </p>
       </WideSection>
       <Section align="left">
-        <LinkedList offset="1.1em">
+        <LinkedList offset="0.7em">
           <CvBlock>
             <JobInfo>
-              <CompanyLogo src="/img/gousto.png" alt="Gousto Logo" />
+              <Image src={goustoLogo} alt="Gousto Logo" width="150" height="50" />
               <div>
                 <JobTitle><FormattedMessage id="cv.job.1.title" /></JobTitle>
                 <CompanyName><FormattedMessage id="cv.job.1.company" /></CompanyName>
@@ -69,7 +72,7 @@ export default function CvBody() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <CompanyLogo src="/img/giffgaff.png" alt="giffgaff Logo" />
+              <Image src={giffgaffLogo} alt="giffgaff Logo" width="150" height="50" />
               <div>
                 <JobTitle><FormattedMessage id="cv.job.2.title" /></JobTitle>
                 <CompanyName><FormattedMessage id="cv.job.2.company" /></CompanyName>
@@ -89,7 +92,7 @@ export default function CvBody() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <CompanyLogo src="/img/tesco.png" alt="Tesco Logo" />
+              <Image src={tescoLogo} alt="Tesco Logo" width="150" height="50" />
               <div>
                 <JobTitle><FormattedMessage id="cv.job.3.title" /></JobTitle>
                 <CompanyName><FormattedMessage id="cv.job.3.company" /></CompanyName>
@@ -112,7 +115,7 @@ export default function CvBody() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <CompanyLogo src="/img/opus.jfif" alt="Opus Uk Logo" />
+              <Image src={opusLogo} alt="Opus Uk Logo" width="130" height="50" />
               <div>
                 <JobTitle><FormattedMessage id="cv.job.4.title" /></JobTitle>
                 <CompanyName><FormattedMessage id="cv.job.4.company" /></CompanyName>
@@ -131,7 +134,7 @@ export default function CvBody() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <CompanyLogo src="/img/icap.png" alt="ICAP Logo" />
+              <Image src={icapLogo} alt="ICAP Logo" width="150" height="50" />
               <div>
                 <JobTitle><FormattedMessage id="cv.job.5.title" /></JobTitle>
                 <CompanyName><FormattedMessage id="cv.job.5.company" /></CompanyName>
@@ -144,7 +147,7 @@ export default function CvBody() {
           </CvBlock>
           <CvBlock>
             <JobInfo>
-              <CompanyLogo src="/img/opus.jfif" alt="Opus Uk Logo" />
+              <Image src={opusLogo} alt="Opus Uk Logo" width="130" height="50" />
               <div>
                 <JobTitle><FormattedMessage id="cv.job.6.title" /></JobTitle>
                 <CompanyName><FormattedMessage id="cv.job.6.company" /></CompanyName>
