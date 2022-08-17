@@ -3,10 +3,9 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledSection = styled.section`
-  line-height: 1rem;
   padding: 2rem 2rem;
   max-width: 60em;
-  width: 90vw;
+  width: 90%;
   color: #333;
   text-align: ${(props) => props.align};
   background: ${(props) => props.theme.colors.section};

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const StyledSection = styled.section`
-  line-height: 1rem;
   color: #333;
   text-align: ${(props) => props.align};
   background: white;
@@ -16,7 +15,7 @@ const StyledSection = styled.section`
 
 const ContentWrapper = styled.div`
   max-width: 60em;
-  width: 90vw;
+  width: 90%;
   margin: 0 auto;
   padding: 2rem 2rem;
 `;

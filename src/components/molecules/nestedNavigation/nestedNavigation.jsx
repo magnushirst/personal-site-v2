@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
 
 const Chevron = styled.i`
   transition: rotate 100ms ease;
@@ -15,13 +14,17 @@ const Chevron = styled.i`
   position: relative;
   margin-left: 1em;
 
-  &.active{
+  &.active {
     rotate: 180deg;
   }
 `;
 const expand = keyframes`
-  from { max-height: 0; }
-  to { max-height: 100vh; }
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 100vh;
+  }
 `;
 const SubNav = styled.div`
   position: relative;
@@ -31,12 +34,14 @@ const SubNav = styled.div`
   overflow: hidden;
   border-left: 1px solid ${(props) => props.theme.colors.base};
   display: none;
+
   &.active {
     display: flex;
     padding: 0.3em 0 0.3em 0.5em;
     margin: 1em 0 0 1em;
     animation: ${expand} 1s forwards;
   }
+
   & > ul {
     display: flex;
     flex-direction: column;
@@ -56,14 +61,15 @@ const Button = styled.button`
 
 export default function NestedNavigation({ title, children }) {
   const [isOpen, setOpen] = useState(false);
+
   return (
     <li>
-      <Button type="button" onClick={() => setOpen(!isOpen)}>
-        <FormattedMessage id={title} />
+      <Button aria-expanded={isOpen} aria-controls={`${title}-subnav`} type="button" aria-label={`Expand ${title} navigation`} onClick={() => setOpen(!isOpen)}>
+        { title }
         <Chevron className={isOpen ? 'active' : ''} />
       </Button>
-      <SubNav className={isOpen ? 'active' : ''} aria-hidden={!isOpen}>
-        { children }
+      <SubNav id={`${title}-subnav`} className={isOpen ? 'active' : ''} aria-hidden={!isOpen}>
+        {children}
       </SubNav>
     </li>
   );

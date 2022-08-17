@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledH2 = styled.h1`
+const StyledH2 = styled.h2`
   font-weight: 900;
   font-size: 2.2rem;
   vertical-align: top;

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, useIntl } from 'react-intl';
 import NestedNavigation from '../nestedNavigation/nestedNavigation';
 import DecoratedNavLink from '../../atoms/decoratedNavLink/decoratedNavLink';
 import OutsideClick from '../../../hooks/outsideClick/outsideClick';
@@ -49,9 +49,9 @@ const NavigationWrapper = styled.div`
   z-index: 1;
   display: block;
   position: fixed;
-  right: -80vw;
+  right: -80%;
   top: 0;
-  width: 80vw;
+  width: 80%;
   max-width: 20em;
   background-color: ${(props) => props.theme.colors.contrast};
   height: 100vh;
@@ -87,6 +87,9 @@ export default function Header() {
     }
   }, [menuOpen]);
 
+  const intl = useIntl();
+  const projectNavTitle = intl.formatMessage({ id: 'site.header.nav.sandbox' });
+
   return (
     <header>
       <HeaderWrapper>
@@ -96,7 +99,7 @@ export default function Header() {
           </SiteTitle>
         </a>
         <LinkWrapper>
-          <BurgerButton onClick={() => setMenuOpen(!menuOpen)}>
+          <BurgerButton aria-label="Open navigation" onClick={() => setMenuOpen(!menuOpen)}>
             <svg viewBox="0 0 100 80" width="20" height="20" fill="#DDC9B4">
               <rect width="100" height="20" />
               <rect y="30" width="100" height="20" />
@@ -104,7 +107,7 @@ export default function Header() {
             </svg>
           </BurgerButton>
           <NavigationWrapper ref={boxRef} className={menuOpen ? 'menu-open' : ''}>
-            <CloseButton onClick={() => setMenuOpen(!menuOpen)}>
+            <CloseButton aria-label="Close navigation" onClick={() => setMenuOpen(!menuOpen)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -129,7 +132,7 @@ export default function Header() {
                   <FormattedMessage id="site.header.nav.cv" />
                 </DecoratedNavLink>
               </li>
-              <NestedNavigation title="site.header.nav.sandbox">
+              <NestedNavigation title={projectNavTitle}>
                 <ul>
                   <li><DecoratedNavLink to="/sandbox/1">Project 1</DecoratedNavLink></li>
                   <li><DecoratedNavLink to="/sandbox/2">Project 2</DecoratedNavLink></li>

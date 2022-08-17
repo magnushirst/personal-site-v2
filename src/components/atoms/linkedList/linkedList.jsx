@@ -6,22 +6,22 @@ const StyledList = styled.ul`
   position: relative;
   display: block;
 
-  & > div {
+  & > li {
     position: relative;
     padding-bottom: 2em;
   }
-  & > div:not(:last-child) > li:after{
+  & > li:not(:last-child) > div:after{
     content: '';
     background-color: ${(props) => props.theme.colors.highlight};
     width: .2em;
     height: 100%;
     position: absolute;
-    left: .7em;
+    left: 1.7em;
     top: ${(props) => props.offset};
   }
 `;
 
-const StyledListItem = styled.li`
+const StyledItem = styled.div`
   margin-left: 4em;
   display: flex;
   justify-content: left;
@@ -32,7 +32,7 @@ const StyledListItem = styled.li`
     height: 1.6em;
     width: 1.6em;
     position: absolute;
-    left: 0;
+    left: 1em;
     top: ${(props) => props.offset};
   }
 `;
@@ -42,10 +42,10 @@ export default function LinkedList({ offset, children }) {
     <StyledList offset={offset}>
       {children.map((child, i) => (
         // eslint-disable-next-line react/no-array-index-key
-        <div key={i}>
-          <StyledListItem offset={offset}>{ child }</StyledListItem>
+        <li key={i}>
+          <StyledItem offset={offset}>{ child }</StyledItem>
           {' '}
-        </div>
+        </li>
       ))}
     </StyledList>
   );
@@ -57,7 +57,7 @@ LinkedList.propTypes = {
    */
   offset: PropTypes.string,
   /**
-   * The children of the element which are rendered within the Title
+   * The children of the element which are rendered within the SecondaryTitle
    */
   children: PropTypes.node.isRequired,
 };

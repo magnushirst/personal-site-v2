@@ -24,18 +24,17 @@ const JobTitle = styled.h3`
   font-size: 1.4rem;
   font-weight: 600;
   padding-bottom: .5em;
-  line-height: 1.4em;
 `;
 const CompanyName = styled.span`
   display: block;
   padding-left: 1em;
   margin-bottom: .5em;
-  color: #888;
+  color: ${(props) => props.theme.colors.altBase};
 `;
 const JobDuration = styled.span`
   display: block;
   padding-left: 1em;
-  color: #888;
+  color: ${(props) => props.theme.colors.altBase};
 `;
 const JobDescription = styled.div`
   padding-left: 1em;
@@ -47,7 +46,7 @@ const JobDescription = styled.div`
 `;
 export default function Cv() {
   return (
-    <>
+    <article>
       <WideSection align="left">
         <Title>
           <FormattedMessage id="cv.title" />
@@ -164,6 +163,6 @@ export default function Cv() {
           </CvBlock>
         </LinkedList>
       </Section>
-    </>
+    </article>
   );
 }

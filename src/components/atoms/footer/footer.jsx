@@ -13,6 +13,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   margin-top: 2em;
   color: ${(props) => props.theme.colors.base};
+  font-weight: 550;
 `;
 
 export default function Footer() {
