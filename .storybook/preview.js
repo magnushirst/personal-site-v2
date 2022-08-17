@@ -1,6 +1,7 @@
 import {reactIntl} from './reactIntl.js';
-import Light from "../src/themes/light/light";
+import styled from "styled-components";
 import {withThemesProvider} from "themeprovider-storybook";
+import Light from "../src/themes/light/light";
 import {addDecorator} from "@storybook/react";
 import GlobalStyle from "../src/utils/globalStyle/globalStyle";
 import "../public/index.css"
@@ -28,11 +29,14 @@ const themes = [
   },
 ]
 
+const Wrapper = styled.div`
+  background-color: ${(props) => props.theme.colors.base};
+`
 addDecorator((story) => (
-  <>
+  <Wrapper>
     <GlobalStyle />
     {story()}
-  </>
+  </Wrapper>
 ));
 
 export const decorators = [withThemesProvider(themes)];

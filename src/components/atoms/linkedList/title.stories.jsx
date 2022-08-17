@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LinkedList from './linkedList';
+import Section from '../../molecules/section/section';
+import WideSection from '../../molecules/wideSection/wideSection';
 
 export default {
   title: 'Atoms/Linked List',
@@ -13,9 +15,15 @@ export default {
 
 function Template({ offset, children }) {
   return (
-    <LinkedList offset={offset}>
-      {children}
-    </LinkedList>
+    <>
+      <LinkedList offset={offset}>{children}</LinkedList>
+      <Section>
+        <LinkedList offset={offset}>{children}</LinkedList>
+      </Section>
+      <WideSection>
+        <LinkedList offset={offset}>{children}</LinkedList>
+      </WideSection>
+    </>
   );
 }
 

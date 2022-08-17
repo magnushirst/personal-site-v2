@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   body {
     font-family: ${(props) => props.theme.fontFamily};
+    padding: 0 !important;
   }
 
   body::-webkit-scrollbar {
