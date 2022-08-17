@@ -9,7 +9,7 @@ const StyledSection = styled.section`
   width: 90vw;
   color: #333;
   text-align: ${(props) => props.align};
-  background: ${(props) => props.theme.color.section};
+  background: ${(props) => props.theme.colors.section};
   margin: 2em auto 0;
   box-shadow: -5px 5px 5px -4px black;
   display: flex;
