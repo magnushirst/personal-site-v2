@@ -1,6 +1,8 @@
 import {reactIntl} from './reactIntl.js';
 import Light from "../src/themes/light/light";
 import {withThemesProvider} from "themeprovider-storybook";
+import {addDecorator} from "@storybook/react";
+import GlobalStyle from "../src/utils/globalStyle/globalStyle";
 
 export const parameters = {
   reactIntl,
@@ -8,7 +10,7 @@ export const parameters = {
   locales: {
     en: {title: "English", left: '🇺🇸'},
   },
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: {argTypesRegex: "^on[A-Z].*"},
   controls: {
     matchers: {
       color: /(background|color)$/i,
@@ -16,13 +18,20 @@ export const parameters = {
     },
   },
 }
-// Options:
+
 const themes = [
   {
-    name: 'Light' ,
+    name: 'Light',
     backgroundColor: '#fff',
     ...Light,
   },
 ]
+
+addDecorator((story) => (
+  <>
+    <GlobalStyle />
+    {story()}
+  </>
+));
 
 export const decorators = [withThemesProvider(themes)];

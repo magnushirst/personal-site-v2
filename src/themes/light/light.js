@@ -6,6 +6,6 @@ const lightTheme = {
     altBase: '#7A6C5D',
     section: '#FFF',
   },
-  font: '\'Nunito Sans\', \'Helvetica Neue\', Helvetica, Arial, sans-serif;',
+  fontFamily: '\'Nunito Sans\', \'Helvetica Neue\', Helvetica, Arial, sans-serif;',
 };
 export default lightTheme;

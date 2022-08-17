@@ -5,11 +5,9 @@ import styled from 'styled-components';
 const StyledH2 = styled.h1`
   font-weight: 900;
   font-size: 2.2rem;
-  line-height: 1;
   vertical-align: top;
   margin-bottom: .5em;
   display: block;
-  font-family: ${(props) => props.theme.font};
 `;
 
 export default function Title({ children }) {
