@@ -3,6 +3,7 @@ import Light from "../src/themes/light/light";
 import {withThemesProvider} from "themeprovider-storybook";
 import {addDecorator} from "@storybook/react";
 import GlobalStyle from "../src/utils/globalStyle/globalStyle";
+import "../public/index.css"
 
 export const parameters = {
   reactIntl,
